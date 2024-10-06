@@ -1,4 +1,5 @@
-## Todo 
+## Todo
+
 - [ ] use github md files for blog creation
 - [ ] run ci to auto update blog when (src) dir changes
 - [ ] add ui to write blogs
