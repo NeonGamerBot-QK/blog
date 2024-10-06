@@ -1,0 +1,43 @@
+---
+// Component Imports
+import fs from "fs";
+import path  from 'node:path';
+import { fileURLToPath } from 'node:url';
+import Counter from '../components/Counter';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const someProps = {
+	count: 0,
+};
+const files = fs.readdirSync(path.join(__dirname, '..', '..')).join(', ')
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<style>
+			html,
+			body {
+				font-family: system-ui;
+				margin: 0;
+			}
+			body {
+				padding: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<Counter {...someProps} client:visible>
+				<h1>Hello, React!</h1>
+        {files}
+      </Counter>
+		</main>
+	</body>
+</html>
