@@ -1,0 +1,62 @@
+---
+import GiscusComp from "../../components/Giscus";
+import MarkdownPage from "../../components/Markdown";
+import { getBlog, getBlogFileNames } from "../../util";
+export function getStaticPaths() {
+  return getBlogFileNames().map((f) => {
+    return { params: { blog: f.replace(/\.md$/, "") } };
+  });
+  // return [
+  //   { params: { path: "one/two/three" } },
+  //  { params: { path: "four" } },
+  //  { params: { path: undefined } },
+  // ];
+}
+
+const { blog } = Astro.params;
+console.log(blog);
+const blogInfo = getBlog(blog + ".md");
+console.debug(blogInfo);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      html,
+      body {
+        font-family: system-ui;
+        margin: 0;
+      }
+    </style>
+    <title>Blog - {blogInfo.config.title}</title>
+  </head>
+  <body>
+    <main>
+      <div class="hero bg-base-200 min-h-screen">
+        <div class="hero-content">
+          <div>
+            <div class="text-center">
+              <h1 class="text-5xl font-bold">{blogInfo.config.title}</h1>
+              <p class="py-6">{blogInfo.config.description}.</p>
+            </div>
+            <div
+              class="bg-base-300 p-5 rounded shadow-xl prose-invert prose prose-h1:font-bold prose-h1:text-xl
+  prose-a:text-blue-400 prose-p:text-justify prose-img:rounded-xl"
+            >
+              <MarkdownPage markdown={blogInfo.actualMd} />
+            </div>
+            <br />
+            <div class="text-center">
+              giscus here (todo)
+              <GiscusComp />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
