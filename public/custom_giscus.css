@@ -9,9 +9,24 @@ main {
   --color-notifications-button-hover-bg: rgba(203, 166, 247, 0.6);
   --color-workflow-card-header-shadow: rgba(27, 31, 35, 0.04);
   --color-icon-directory: var(--fgColor-muted, var(--color-fg-muted));
-  --color-calendar-halloween-graph-day-L1-bg: rgba(203, 166, 247, 0.4) !important;
-  --color-calendar-halloween-graph-day-L2-bg: rgba(203, 166, 247, 0.6) !important;
-  --color-calendar-halloween-graph-day-L3-bg: rgba(203, 166, 247, 0.8) !important;
+  --color-calendar-halloween-graph-day-L1-bg: rgba(
+    203,
+    166,
+    247,
+    0.4
+  ) !important;
+  --color-calendar-halloween-graph-day-L2-bg: rgba(
+    203,
+    166,
+    247,
+    0.6
+  ) !important;
+  --color-calendar-halloween-graph-day-L3-bg: rgba(
+    203,
+    166,
+    247,
+    0.8
+  ) !important;
   --color-calendar-halloween-graph-day-L4-bg: #cba6f7 !important;
   --color-calendar-winter-graph-day-L1-bg: rgba(203, 166, 247, 0.4) !important;
   --color-calendar-winter-graph-day-L2-bg: rgba(203, 166, 247, 0.6) !important;
@@ -354,14 +369,12 @@ main {
   --shadow-resting-small: 0px 1px 0px 0px #11111b, 0px 1px 3px 0px #11111b;
   --shadow-resting-medium: 0px 3px 6px 0px #11111b;
   --shadow-floating-small: 0px 0px 0px 1px #1e1e2e, 0px 6px 12px -3px #11111b,
-      0px 6px 18px 0px #11111b;
-  --shadow-floating-medium: 0px 0px 0px 1px #313244,
-      0px 8px 16px -4px #11111b, 0px 4px 32px -4px #11111b,
-      0px 24px 48px -12px #11111b, 0px 48px 96px -24px #11111b;
-  --shadow-floating-large: 0px 0px 0px 1px #313244,
-      0px 24px 48px 0px #010409;
-  --shadow-floating-xlarge: 0px 0px 0px 1px #313244,
-      0px 32px 64px 0px #010409;
+    0px 6px 18px 0px #11111b;
+  --shadow-floating-medium: 0px 0px 0px 1px #313244, 0px 8px 16px -4px #11111b,
+    0px 4px 32px -4px #11111b, 0px 24px 48px -12px #11111b,
+    0px 48px 96px -24px #11111b;
+  --shadow-floating-large: 0px 0px 0px 1px #313244, 0px 24px 48px 0px #010409;
+  --shadow-floating-xlarge: 0px 0px 0px 1px #313244, 0px 32px 64px 0px #010409;
   --shadow-floating-legacy: 0px 6px 12px -3px #11111b, 0px 6px 18px 0px #11111b;
   --outline-focus: #89b4fa solid 2px;
   /* Enhanced Repo Insights Views - https://github.com/orgs/community/discussions/135572 */
