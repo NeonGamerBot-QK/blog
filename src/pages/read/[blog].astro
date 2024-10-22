@@ -32,6 +32,7 @@ console.debug(blogInfo);
         margin: 0;
       }
     </style>
+<!--
     <script
       src="https://giscus.app/client.js"
       data-repo="NeonGamerBot-QK/blog"
@@ -47,7 +48,8 @@ console.debug(blogInfo);
       data-lang="en"
       crossorigin="anonymous"
       async></script>
-    <title>Blog - {blogInfo.config.title}</title>
+-->    
+<title>Blog - {blogInfo.config.title}</title>
   </head>
   <body>
     <main>
@@ -65,13 +67,25 @@ console.debug(blogInfo);
               <MarkdownPage markdown={blogInfo.actualMd} />
             </div>
             <br />
-            <div class="text-center">
-              giscus here (todo)
-              <GiscusComp />
-            </div>
+            <div class="text-center" id="comments"></div>
           </div>
         </div>
       </div>
     </main>
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="NeonGamerBot-QK/blog"
+      data-repo-id="R_kgDOM8DnFQ"
+      data-category="General"
+      data-category-id="DIC_kwDOM8DnFc4Cjakf"
+      data-mapping="title"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="1"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      crossorigin="anonymous"
+      async></script>
   </body>
 </html>
