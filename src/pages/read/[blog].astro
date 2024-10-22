@@ -1,10 +1,9 @@
 ---
-import GiscusComp from "../../components/Giscus";
 import MarkdownPage from "../../components/Markdown";
 import { getBlog, getBlogFileNames } from "../../util";
 export function getStaticPaths() {
   return getBlogFileNames().map((f) => {
-    return { params: { blog: f.replace(/\.md$/, "") } };
+    return { params: { blog: f.replace(/\.mdx$/, "") } };
   });
   // return [
   //   { params: { path: "one/two/three" } },
@@ -15,7 +14,7 @@ export function getStaticPaths() {
 
 const { blog } = Astro.params;
 console.log(blog);
-const blogInfo = getBlog(blog + ".md");
+const blogInfo = getBlog(blog + ".mdx");
 console.debug(blogInfo);
 ---
 
@@ -67,17 +66,14 @@ console.debug(blogInfo);
               <MarkdownPage markdown={blogInfo.actualMd} />
             </div>
             <br />
-            <div class="text-center" id="comments"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script
+<div class="text-center">
+  <script
       src="https://giscus.app/client.js"
       data-repo="NeonGamerBot-QK/blog"
       data-repo-id="R_kgDOM8DnFQ"
       data-category="General"
       data-category-id="DIC_kwDOM8DnFc4Cjakf"
+      data-theme="https://giscus.catppuccin.com/themes/mocha.css"
       data-mapping="title"
       data-strict="0"
       data-reactions-enabled="1"
@@ -87,5 +83,11 @@ console.debug(blogInfo);
       data-lang="en"
       crossorigin="anonymous"
       async></script>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
   </body>
 </html>

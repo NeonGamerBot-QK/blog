@@ -35,7 +35,7 @@ export default function HomePage({}) {
                     <a
                       className="btn btn-primary"
                       style={{ color: "var(--text)" }}
-                      href={`/read/${file.fileName.replace(/\.md$/, "")}`}
+                      href={`/read/${file.fileName.replace(/\.mdx$/, "")}`}
                     >
                       Read
                     </a>
