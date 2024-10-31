@@ -65,6 +65,14 @@
     "@babel/core" ">=7.0.0-0 <8.0.0"
     "@babel/plugin-transform-react-jsx" "^7.17.12"
 
+"@astrojs/rss@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-4.0.9.tgz#aa906449914d49818ed91f1ce6aa643bbc6ee561"
+  integrity sha512-W1qeLc/WP1vMS5xXa+BnaLU0paeSeGjN8RJVAoBaOIkQuKXjIUA9hvPno89heo73in5i67g40gy70oeeHMqp6A==
+  dependencies:
+    fast-xml-parser "^4.5.0"
+    kleur "^4.1.5"
+
 "@astrojs/tailwind@^5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-5.1.1.tgz#18260ed440ab0f5e420854825047d562d4d5674e"
@@ -1431,6 +1439,13 @@ fast-glob@^3.3.0, fast-glob@^3.3.2:
     glob-parent "^5.1.2"
     merge2 "^1.3.0"
     micromatch "^4.0.4"
+
+fast-xml-parser@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.5.0.tgz#2882b7d01a6825dfdf909638f2de0256351def37"
+  integrity sha512-/PlTQCI96+fZMAOLMZK4CWG1ItCbfZ/0jx7UIJFChPNrx7tcEgerUgWbeieCM9MfHInUDyK8DWYZ+YrywDJuTg==
+  dependencies:
+    strnum "^1.0.5"
 
 fastparse@^1.1.2:
   version "1.1.2"
@@ -3142,6 +3157,11 @@ strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
   integrity sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==
+
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 style-to-object@^1.0.0:
   version "1.0.8"
