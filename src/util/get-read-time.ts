@@ -1,11 +1,11 @@
 export function estimateReadTime(text, wpm = 250) {
-    // Count words in the text
-    const wordCount = text.split(/\s+/).filter(word => word).length;
+  // Count words in the text
+  const wordCount = text.split(/\s+/).filter((word) => word).length;
 
-    // Calculate read time in minutes
-    const readTimeMinutes = wordCount / wpm;
+  // Calculate read time in minutes
+  const readTimeMinutes = wordCount / wpm;
 
-    // Convert to minutes and seconds
-    const minutes = Math.floor(readTimeMinutes);
-    return `${minutes} min${minutes > 1 ? 's' : ''}`;
+  // Convert to minutes and seconds
+  const minutes = Math.floor(readTimeMinutes);
+  return `${minutes} min${minutes > 1 ? "s" : ""}`;
 }
