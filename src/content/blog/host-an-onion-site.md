@@ -119,5 +119,6 @@ once you have setup make sure you nginx works by checking its status with `sudo 
 Then... check your onion site on tor and then tada! it works yayyy
 
 ## Conclusion
+
 Tor and onion sites empower individuals to bypass censorship and protect their privacy. By hosting your own onion site, you contribute to a free and open internet for everyone.
 Keep your site public, accessible, and censorship-resistant!
