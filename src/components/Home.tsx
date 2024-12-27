@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HomePage({ files}) {
+export default function HomePage({ files }) {
   // const files = getCollection;
   //TODO: Add your code here
   // console.debug(files[0]);
