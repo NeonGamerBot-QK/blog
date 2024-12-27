@@ -272,7 +272,7 @@ asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
 ```ts
-console.log(0)
+console.log(0);
 ```
 
 ## Span Elements
