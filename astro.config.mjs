@@ -10,18 +10,19 @@ export default defineConfig({
   // Enable React to support React JSX components.
   integrations: [
     react(),
-     tailwind(),
+    tailwind(),
     //  mdx(),
-      webmanifest({
-    name: SITE_TITLE,
-    icon: "public/favicon.png", // source for favicon & icons
-    short_name: SITE_TITLE,
-    description: "My Blogs",
-    start_url: "/",
-    theme_color: "#cba6f7", // mocha mauve
-    background_color: "#1e1e2e", // mocha base
-    display: "standalone",
-  })],
+    webmanifest({
+      name: SITE_TITLE,
+      icon: "public/favicon.png", // source for favicon & icons
+      short_name: SITE_TITLE,
+      description: "My Blogs",
+      start_url: "/",
+      theme_color: "#cba6f7", // mocha mauve
+      background_color: "#1e1e2e", // mocha base
+      display: "standalone",
+    }),
+  ],
   markdown: {
     shikiConfig: {
       themes: {
@@ -30,5 +31,4 @@ export default defineConfig({
       },
     },
   },
-
 });
