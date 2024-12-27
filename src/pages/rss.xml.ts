@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 export async function GET(context) {
   const files = await getCollection("blog");
-  console.log(files[0].data.date.getTime(), Date.now())
+  console.log(files[0].data.date.getTime(), Date.now());
   return rss({
     // `<title>` field in output xml
     title: "Saahils Blog",
@@ -15,7 +15,9 @@ export async function GET(context) {
     site: context.site || new URL("https://blog.saahild.com"),
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
-    items: files.filter(e=>e.data.date.getTime() < Date.now()).map(e=>e.data),
+    items: files
+      .filter((e) => e.data.date.getTime() < Date.now())
+      .map((e) => e.data),
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
   });
