@@ -1,9 +1,10 @@
 ---
-import MarkdownPage from "../../components/Markdown";
-import { getBlog, getBlogFileNames } from "../../util";
-export function getStaticPaths() {
-  return getBlogFileNames().map((f) => {
-    return { params: { blog: f.replace(/\.mdx$/, "") } };
+import { getCollection } from "astro:content";
+import { estimateReadTime } from "../../util/get-read-time";
+export async function getStaticPaths() {
+  const files = await getCollection("blog");
+  return files.map((f) => {
+    return { params: { blog: f.slug } };
   });
   // return [
   //   { params: { path: "one/two/three" } },
@@ -14,8 +15,9 @@ export function getStaticPaths() {
 
 const { blog } = Astro.params;
 console.log(blog);
-const blogInfo = getBlog(blog + ".mdx");
+const blogInfo = (await getCollection("blog")).find((bl) => blog === bl.slug);
 console.debug(blogInfo);
+const thepost = await blogInfo.render()
 ---
 
 <html lang="en">
@@ -48,24 +50,29 @@ console.debug(blogInfo);
       crossorigin="anonymous"
       async></script>
 -->    
-<title>Blog - {blogInfo.config.title}</title>
+<title>{blogInfo.data.title}</title>
   </head>
   <body>
     <main>
-      <div class="hero bg-base-200 min-h-screen">
+      <div class="hero w-full bg-base-200 min-h-screen">
         <div class="hero-content">
           <div>
             <div class="text-center">
-              <h1 class="text-5xl font-bold">{blogInfo.config.title}</h1>
-              <p class="py-6">{blogInfo.config.description}.</p>
+              <h1 class="text-5xl font-bold">{blogInfo.data.title}</h1>
+              <p class="py-6 text-md">{blogInfo.data.description} - <span class="badge badge-outline">{estimateReadTime(blogInfo.body)}</span></p>
             </div>
             <div
-              class="bg-base-300 p-5 rounded shadow-xl prose-invert prose prose-h1:font-bold prose-h1:text-xl
-  prose-a:text-blue-400 prose-p:text-justify prose-img:rounded-xl"
+              class="p-5 rounded shadow-xl prose-invert prose prose-h1:font-bold prose-h2:text-xl
+  prose-a:text-blue-400 prose-p:text-justify prose-img:rounded-xl w-full max-w-screen-md "
+  style={{ 
+    color: "#cdd6f4",
+  }}
             >
-              <MarkdownPage markdown={blogInfo.actualMd} />
+              <!-- <MarkdownPage markdown={blogInfo.body} /> -->
+               {<thepost.Content />}
             </div>
             <br />
+
 <div class="text-center">
   <script
       src="https://giscus.app/client.js"

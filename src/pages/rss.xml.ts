@@ -1,6 +1,9 @@
 import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
 
-export function GET(context) {
+export async function GET(context) {
+  const files = await getCollection("blog");
+  console.log(files[0].data.date.getTime(), Date.now())
   return rss({
     // `<title>` field in output xml
     title: "Saahils Blog",
@@ -12,7 +15,7 @@ export function GET(context) {
     site: context.site || new URL("https://blog.saahild.com"),
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
-    items: [],
+    items: files.filter(e=>e.data.date.getTime() < Date.now()).map(e=>e.data),
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
   });

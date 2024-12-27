@@ -1,9 +1,12 @@
 ---
 // Component Imports
+import { getCollection } from "astro:content";
 import Home from "../components/Home.tsx";
 const someProps = {
   count: 0,
 };
+const files = await getCollection("blog");
+console.log(files, 'f');
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -24,7 +27,7 @@ const someProps = {
   </head>
   <body>
     <main>
-      <Home />
+      <Home  files={files}/>
     </main>
   </body>
 </html>

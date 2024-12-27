@@ -271,10 +271,8 @@ Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-```
-tell application "Foo"
-    beep
-end tell
+```ts
+console.log(0)
 ```
 
 ## Span Elements

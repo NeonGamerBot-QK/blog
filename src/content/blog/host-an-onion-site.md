@@ -1,7 +1,7 @@
 ---
 title: "The one and only: Tor"
 description: "Host your own onion site!"
-date: 2024-12-06 # YYYY-MM-DD
+date: 2025-01-05 # YYYY-MM-DD
 tags: ["markdown", "tor", "onion", "no-cenosrship"]
 cover: "/images/tor.jpg" # make an actual header for this
 ---
@@ -16,7 +16,7 @@ If you didnt know what tor is already, its to complicated for me to explain tbh.
 ## Why Tor?
 
 Tor being 100% anon means its safer and some people prefer onionsites over clearnet sites (non onion sites). See the diagram below for how onion sites actually work.
-![diagram](/images/tor/onion-diagram.png)
+![diagram](/images/tor/diagram-onion.png)
 _take from [this](https://medium.com/void-security/an-intro-to-the-onion-routing-tor-1482a44bfe8e) blog post_
 ive also ran tests of my own to make sure onionsites cant get ip's as my tests return `127.0.0.1` for my onion site.
 
@@ -35,17 +35,19 @@ _fyi those are not real onion addresses_
 
 Onion sites dont use ssl as the tor protocol encrypts the traffic!
 
-### But ive heard onion sites are bad !!
+### But ive heard onion sites are bad !!1!
 
 Yeah there may be some _super shady_ parts to it such as "darkweb" but in countries with heavy censorship like china, iran etc. You can use tor bridges to get around the censorship.
 There are also good onion sites for free and good access such as.
-[Dutch national police](http://tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd.onion/)
-[Duck Duck go](http://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion)
-[CIA](http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion)
-[Archive.is](http://archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion/
-[new york times](https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/)
-[bbc news](https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/)
-and many more.
+
+- [Dutch national police](http://tcecdnp2fhyxlcrjoyc2eimdjosr65hweut6y7r2u6b5y75yuvbkvfyd.onion/)
+- [Duck Duck go](http://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion)
+- [CIA](http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion)
+- [Archive.is](http://archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion/)
+- [new york times](https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/)
+- [bbc news](https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/)
+
+an1d many more.
 
 ## Setup your own onion site
 
@@ -117,5 +119,5 @@ once you have setup make sure you nginx works by checking its status with `sudo 
 Then... check your onion site on tor and then tada! it works yayyy
 
 ## Conclusion
-
-dont get censorship; keep your site public to everyone and to use without being tracked!
+Tor and onion sites empower individuals to bypass censorship and protect their privacy. By hosting your own onion site, you contribute to a free and open internet for everyone.
+Keep your site public, accessible, and censorship-resistant!

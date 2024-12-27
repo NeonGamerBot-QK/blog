@@ -9,22 +9,22 @@ export function getBlogFileNames() {
   return fs.readdirSync(path.join(__dirname, "../blog"));
 }
 export function getBlog(filename: string) {
-  const allblogsdata = getBlogData();
-  return allblogsdata.find((blog) => blog.fileName === filename);
+  // const allblogsdata = getBlogData();
+  // return allblogsdata.find((blog) => blog.fileName === filename);
 }
-export function getBlogData() {
-  const fileNames = getBlogFileNames();
-  return fileNames.map((fileName) => {
-    const fullPath = path.join(__dirname, "../blog", fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const splits = fileContents.split("---");
-    const config = yaml.parse(splits[1]);
-    const actualMd = splits.slice(2).join("---");
-    return {
-      fileName,
-      config,
-      splits,
-      actualMd,
-    };
-  });
-}
+// export function getBlogData() {
+//   const fileNames = getBlogFileNames();
+//   return fileNames.map((fileName) => {
+//     const fullPath = path.join(__dirname, "../blog", fileName);
+//     const fileContents = fs.readFileSync(fullPath, "utf8");
+//     const splits = fileContents.split("---");
+//     const config = yaml.parse(splits[1]);
+//     const actualMd = splits.slice(2).join("---");
+//     return {
+//       fileName,
+//       config,
+//       splits,
+//       actualMd,
+//     };
+//   });
+// }
