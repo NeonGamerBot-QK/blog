@@ -10,12 +10,13 @@
 - [ ] parse the MD metadata using yaml?? (idk)
 
 ## Blog ideas
+
 - [ ] tailscale guide {scheduled}
-- [ ] how to use nodejs 
+- [ ] how to use nodejs
 - [ ] how to use express {scheduled}
 - [ ] how hosting riceathon went {after the gallery is made}
 - [ ] how to use tailwind {scheduled}
-- [ ] crc blog {scheduled} 
+- [ ] crc blog {scheduled}
 - [ ] how to use react {scheduled}
 - [ ] setup jellyfin tut {scheduled}
 
