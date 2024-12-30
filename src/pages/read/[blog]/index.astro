@@ -1,16 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import { estimateReadTime } from "../../util/get-read-time";
+import { estimateReadTime } from "../../../util/get-read-time";
 export async function getStaticPaths() {
   const files = await getCollection("blog");
-  return files.map((f) => {
+  return files.filter((f) => f.data.date.getTime() < Date.now()).map((f) => {
     return { params: { blog: f.slug } };
   });
-  // return [
-  //   { params: { path: "one/two/three" } },
-  //  { params: { path: "four" } },
-  //  { params: { path: undefined } },
-  // ];
 }
 
 const { blog } = Astro.params;
