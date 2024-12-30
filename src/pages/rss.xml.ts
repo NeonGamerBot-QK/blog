@@ -23,8 +23,8 @@ export async function GET(context) {
           description: e.data.description,
           pubDate: e.data.date,
           link: `/read/${e.slug}`,
-          content: e.body
-        }
+          content: e.body,
+        };
       }),
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
