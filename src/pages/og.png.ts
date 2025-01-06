@@ -30,8 +30,7 @@ export async function SVG(component: any) {
 }
 
 export async function GET({ params }) {
- 
- // const element = OpenGraphImage(post);
+  // const element = OpenGraphImage(post);
   // const jsx = inlineTailwind(element);
   //@ts-ignore
   const jsx = Og({ posts });
