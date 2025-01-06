@@ -12,12 +12,12 @@
 ## Blog ideas
 
 - [ ] tailscale guide {scheduled}
-- [ ] how to use nodejs
+- [ ] how to use nodejs v22
 - [ ] how to use express {scheduled}
 - [ ] how hosting riceathon went {after the gallery is made}
 - [ ] how to use tailwind {scheduled}
 - [ ] crc blog {scheduled}
 - [ ] how to use react {scheduled}
 - [ ] setup jellyfin tut {scheduled}
-
+- [ ] on how i automated imessage {scheduled}
 _monthly blog_

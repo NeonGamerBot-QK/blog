@@ -1,12 +1,11 @@
 ---
 // Component Imports
 import { getCollection } from "astro:content";
+import { SEO } from "astro-seo";
 import Home from "../components/Home.tsx";
-const someProps = {
-  count: 0,
-};
+
 const files = await getCollection("blog");
-console.log(files, 'f');
+// console.log(files, 'f');
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -16,14 +15,39 @@ console.log(files, 'f');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <style>
+    <!-- <style>
       html,
       body {
         font-family: system-ui;
         margin: 0;
       }
-    </style>
+    </style> -->
+    <SEO
+      title="Saahils blog"
+      description="My Blogs"
+      openGraph={{
+        basic: {
+          title: "Saahils Blog",
+          type: "blog",
+          image: "/og.png",
+        },
+        optional: {
+          locale: "en_US",
+          description: "My Blogs",
+          siteName: "Saahils Blog",
+        }
+      }}
+      charset="utf-8"
+      titleDefault="Saahils Blog"
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [{name: "theme-color", content: "#cba6f7"}, {name:"title", content: "Saahils Blog"}, { name: "msapplication-TileColor", content: "#cba6f7" }],
+      }}
+      
+    />
   </head>
   <body>
     <main>

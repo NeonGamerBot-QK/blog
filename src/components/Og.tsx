@@ -55,6 +55,3 @@ export default function Og({
     </div>
   );
 }
-export function OgF({ blogData }: { blogData: CollectionEntry<"blog"> }) {
-  return <Og blogData={blogData} />;
-}
