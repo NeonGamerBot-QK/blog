@@ -20,4 +20,4 @@
 - [ ] how to use react {scheduled}
 - [ ] setup jellyfin tut {scheduled}
 - [ ] on how i automated imessage {scheduled}
-_monthly blog_
+      _monthly blog_
