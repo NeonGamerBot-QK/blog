@@ -38,7 +38,13 @@ export default function OgHome({
     >
       <h1 style={{}}>Saahil's Blog</h1>
       <p>My {posts.length} blogs</p>
-      <span>Last posted blog  {formattedDate(posts.reverse().filter(e=>e.data.date.getTime() < Date.now())[0].data.date)}</span>
+      <span>
+        Last posted blog{" "}
+        {formattedDate(
+          posts.reverse().filter((e) => e.data.date.getTime() < Date.now())[0]
+            .data.date,
+        )}
+      </span>
     </div>
   );
 }
