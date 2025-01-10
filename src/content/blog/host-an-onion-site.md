@@ -3,7 +3,7 @@ title: "The one and only: Tor"
 description: "Host your own onion site!"
 date: 2025-02-01 # YYYY-MM-DD
 tags: ["markdown", "tor", "onion", "no-cenosrship"]
-cover: "/images/tor.jpg" # make an actual header for this
+cover: "/images/tor.png" # make an actual header for this
 ---
 
 Welcome to one of my first _actual_ blog posts. So lets get to the point of this blog:
