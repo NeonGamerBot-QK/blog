@@ -30,3 +30,4 @@ export async function GET(context) {
     customData: `<language>en-us</language>`,
   });
 }
+

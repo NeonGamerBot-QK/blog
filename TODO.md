@@ -1,18 +1,18 @@
 ## Todo
 
-- [ ] use github md files for blog creation
+- [x] use github md files for blog creation
 - [ ] run ci to auto update blog when (src) dir changes
 - [ ] add ui to write blogs
 - [ ] add ui for the blog page
-- [ ] add audio, dyslexic font, etc to blogs.
+- [ ] ~~add audio~~ (uhh text to speech is expensive, esp in large text quantity), dyslexic font (working on rn), etc to blogs.
 - [ ] theme it according to how site is themed (currently catppuccin)
-- [ ] Use [giscus](https://giscus.app/) for comments :D (fyi: self hosted w/ @zeon )
-- [ ] parse the MD metadata using yaml?? (idk)
+- [x] Use [giscus](https://giscus.app/) for comments :D (fyi: self hosted w/ @zeon )
+- [x] ~~parse the MD metadata using yaml?? (idk)~~ i used md lol
 
 ## Blog ideas
 
 - [ ] tailscale guide {scheduled}
-- [ ] how to use nodejs v22
+- [x] how to use nodejs v22
 - [ ] how to use express {scheduled}
 - [ ] how hosting riceathon went {after the gallery is made}
 - [ ] how to use tailwind {scheduled}

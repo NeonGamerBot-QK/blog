@@ -24,6 +24,26 @@ const files = await getCollection("blog");
         margin: 0;
       }
     </style> -->
+    <script>
+      if(localStorage.getItem('use-dyslexic-font')) {
+        document.body.innerHTML += `      @font-face {
+  font-family: 'opendyslexic';
+	src: url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
+	font-style: normal;
+	font-weight: normal;
+} 
+
+@font-face {
+	font-family: 'opendyslexic';
+	src: url('/open-dyslexic.ttf');
+	font-weight: normal;
+}
+
+body {
+  font-family: 'opendyslexic', sans-serif;
+}`
+      }
+    </script>
     <SEO
       title="Saahils blog"
       description="My Blogs"
@@ -55,3 +75,4 @@ const files = await getCollection("blog");
     </main>
   </body>
 </html>
+
