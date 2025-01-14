@@ -9,4 +9,3 @@ export function estimateReadTime(text, wpm = 180) {
   const minutes = Math.floor(readTimeMinutes);
   return `${minutes} min${minutes > 1 ? "s" : ""}`;
 }
-
