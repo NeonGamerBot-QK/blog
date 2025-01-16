@@ -1,4 +1,4 @@
-export function estimateReadTime(text, wpm = 250) {
+export function estimateReadTime(text, wpm = 180) {
   // Count words in the text
   const wordCount = text.split(/\s+/).filter((word) => word).length;
 
