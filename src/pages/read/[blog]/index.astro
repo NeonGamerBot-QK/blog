@@ -28,6 +28,13 @@ const thepost = await blogInfo.render()
         margin: 0;
       }
     </style>
+         <link rel="stylesheet" href="/dsylexic.css" />
+         <script>
+          if (localStorage.getItem('use-dyslexic-font') === 'true') {
+            console.log('using dyslexic font');
+            document.documentElement.classList.add('dyslexic');
+          }
+         </script>
 <!--
     <script
       src="https://giscus.app/client.js"

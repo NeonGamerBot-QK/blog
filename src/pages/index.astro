@@ -1,15 +1,14 @@
 ---
 // Component Imports
+// import "../assets/dyslexic.css";
 import { getCollection } from "astro:content";
 import { SEO } from "astro-seo";
 import Home from "../components/Home.tsx";
-
 const files = await getCollection("blog");
 // console.log(files, 'f');
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,26 +23,13 @@ const files = await getCollection("blog");
         margin: 0;
       }
     </style> -->
-    <script>
-      if(localStorage.getItem('use-dyslexic-font')) {
-        document.body.innerHTML += `      @font-face {
-  font-family: 'opendyslexic';
-	src: url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
-	font-style: normal;
-	font-weight: normal;
-} 
-
-@font-face {
-	font-family: 'opendyslexic';
-	src: url('/open-dyslexic.ttf');
-	font-weight: normal;
-}
-
-body {
-  font-family: 'opendyslexic', sans-serif;
-}`
+    <!-- <Dsylexic /> -->
+     <link rel="stylesheet" href="dsylexic.css" />
+     <script>
+      if (localStorage.getItem('use-dyslexic-font') === 'true') {
+        document.documentElement.classList.add('dyslexic');
       }
-    </script>
+     </script>
     <SEO
       title="Saahils blog"
       description="My Blogs"
