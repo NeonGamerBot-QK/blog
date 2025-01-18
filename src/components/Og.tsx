@@ -19,8 +19,10 @@ function formattedDate(date: Date) {
 
 export default function Og({
   blogData,
+  origin,
 }: {
   blogData: CollectionEntry<"blog">;
+  origin: string;
 }) {
   return (
     <div
@@ -41,10 +43,14 @@ export default function Og({
       <span>Posted on {formattedDate(blogData.data.date)}</span>
       <img
         src={
-          (process.env.NODE_ENV == "development"
-            ? "http://localhost:4321"
-            : "https://blog.saahild.com") + blogData.data.cover
+//           (process.env.NODE_ENV == "development"
+// ? "http://localhost:4321"
+// : "https://blog.saahild.com")
+
+        origin  + blogData.data.cover
         }
+        width={200}
+        height={200}
         style={{
           maxWidth: "60%",
           maxHeight: "60%",

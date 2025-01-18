@@ -36,7 +36,7 @@ export async function SVG(component: any) {
   });
 }
 
-export async function GET({ params }) {
+export async function GET({ params, request }) {
   const post = posts.find((post) => post.slug === params.blog); // Find the specific post by slug
   if (!post) {
     return new Response("Post not found", { status: 404 });
@@ -44,8 +44,9 @@ export async function GET({ params }) {
 
   // const element = OpenGraphImage(post);
   // const jsx = inlineTailwind(element);
+  const origin = (new URL(request.url).origin)
   //@ts-ignore
-  const jsx = Og({ blogData: post });
+  const jsx = Og({ blogData: post, origin });
   const png = await PNG(jsx);
   return new Response(png, {
     headers: {

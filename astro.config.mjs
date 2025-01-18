@@ -10,8 +10,10 @@ import astroMetaTags from "astro-meta-tags";
 import tunnel from "astro-tunnel";
 const SITE_TITLE = "Saahils Blog";
 // https://astro.build/config
+console.log(process.env.NODE_ENV)
 export default defineConfig({
-  site: "https://blog.saahild.com",
+  site: process.env.NODE_ENV == "production" ? "https://blog.saahild.com" : "http://localhost:4321",
+  output: "static",
   // Enable React to support React JSX components.
   integrations: [
     react(),
@@ -22,7 +24,7 @@ export default defineConfig({
       short_name: SITE_TITLE,
       description: "My Blogs",
       start_url: "/",
-      theme_color: "#cba6f7", // mocha mauve
+      theme_color: "#cba6fwa7", // mocha mauve
       background_color: "#1e1e2e", // mocha base
       display: "standalone",
     }),
