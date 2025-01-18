@@ -43,11 +43,11 @@ export default function Og({
       <span>Posted on {formattedDate(blogData.data.date)}</span>
       <img
         src={
-//           (process.env.NODE_ENV == "development"
-// ? "http://localhost:4321"
-// : "https://blog.saahild.com")
+          //           (process.env.NODE_ENV == "development"
+          // ? "http://localhost:4321"
+          // : "https://blog.saahild.com")
 
-        origin  + blogData.data.cover
+          origin + blogData.data.cover
         }
         width={200}
         height={200}
