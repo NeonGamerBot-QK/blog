@@ -23,8 +23,9 @@ MMS is text to email so emails can text back with media as well!
 MMS plays a key role in this code as i would have no other way to recive the messages ~~unless i paid for twilo~~
 
 ## How does the code actually work, stop giving bloat
-So this code watches the email and when it recives a text matching the janky way apple sends it. 
-It compiles an epic json file with 
+
+So this code watches the email and when it recives a text matching the janky way apple sends it.
+It compiles an epic json file with
 
 [unfinished, draft]
 (please finish me)
