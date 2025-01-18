@@ -10,9 +10,12 @@ import astroMetaTags from "astro-meta-tags";
 import tunnel from "astro-tunnel";
 const SITE_TITLE = "Saahils Blog";
 // https://astro.build/config
-console.log(process.env.NODE_ENV)
+console.log(process.env.NODE_ENV);
 export default defineConfig({
-  site: process.env.NODE_ENV == "production" ? "https://blog.saahild.com" : "http://localhost:4321",
+  site:
+    process.env.NODE_ENV == "production"
+      ? "https://blog.saahild.com"
+      : "http://localhost:4321",
   output: "static",
   // Enable React to support React JSX components.
   integrations: [
