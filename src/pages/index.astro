@@ -16,14 +16,6 @@ const files = await getCollection("blog");
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
-      }
-    </style> -->
-    <!-- <Dsylexic /> -->
      <link rel="stylesheet" href="dsylexic.css" />
      <script>
       if (localStorage.getItem('use-dyslexic-font') === 'true') {
@@ -52,7 +44,6 @@ const files = await getCollection("blog");
         link: [{ rel: "icon", href: "/favicon.ico" }],
         meta: [{name: "theme-color", content: "#cba6f7"}, {name:"title", content: "Saahils Blog"}, { name: "msapplication-TileColor", content: "#cba6f7" }],
       }}
-      
     />
   </head>
   <body>
@@ -61,4 +52,3 @@ const files = await getCollection("blog");
     </main>
   </body>
 </html>
-

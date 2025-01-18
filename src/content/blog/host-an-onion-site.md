@@ -1,7 +1,7 @@
 ---
 title: "The one and only: Tor"
 description: "Host your own onion site!"
-date: 2025-02-01 # YYYY-MM-DD
+date: 2025-02-10 # YYYY-MM-DD
 tags: ["markdown", "tor", "onion", "no-cenosrship"]
 cover: "/images/tor.png" # make an actual header for this
 ---

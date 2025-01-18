@@ -3,7 +3,7 @@ title: "Install nodejs"
 description: "How to install nodejs (v22)"
 date: 2025-01-06 # YYYY-MM-DD
 tags: ["markdown", "nodejs", "nvm", "nodejs-22", "node"]
-cover: "/images/nodejs.jpg" # make an actual header for this
+cover: "/images/nodejs.png" # make an actual header for this
 ---
 
 # Install nodejs

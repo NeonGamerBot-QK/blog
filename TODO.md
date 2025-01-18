@@ -4,8 +4,8 @@
 - [ ] run ci to auto update blog when (src) dir changes
 - [ ] add ui to write blogs - and how/why would i do this.. (via astro password stuff ig)
 - [ ] add ui for the blog page
-- [ ] ~~add audio~~ (uhh text to speech is expensive, esp in large text quantity), dyslexic font (working on rn), etc to blogs.
-- [ ] theme it according to how site is themed (currently catppuccin)
+- [x] ~~add audio~~ (uhh text to speech is expensive, esp in large text quantity), dyslexic font (working on rn), etc to blogs.
+- [x] theme it according to how site is themed (currently catppuccin)
 - [x] Use [giscus](https://giscus.app/) for comments :D (fyi: self hosted w/ @zeon )
 - [x] ~~parse the MD metadata using yaml?? (idk)~~ i used md lol
 
