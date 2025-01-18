@@ -15,7 +15,7 @@
 - [x] how to use nodejs v22
 - [ ] how to use express {scheduled}
 - [x] ~~how hosting riceathon went {after the gallery is made}~~ i just dont want to do this anymore
-- [ ] how my minus12 submission went 
+- [ ] how my minus12 submission went
 - [ ] how to use tailwind {scheduled}
 - [ ] crc blog {scheduled}
 - [ ] how to use react {scheduled}
