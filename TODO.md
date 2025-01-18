@@ -2,7 +2,7 @@
 
 - [x] use github md files for blog creation
 - [ ] run ci to auto update blog when (src) dir changes
-- [ ] add ui to write blogs
+- [ ] add ui to write blogs - and how/why would i do this.. (via astro password stuff ig)
 - [ ] add ui for the blog page
 - [ ] ~~add audio~~ (uhh text to speech is expensive, esp in large text quantity), dyslexic font (working on rn), etc to blogs.
 - [ ] theme it according to how site is themed (currently catppuccin)
@@ -14,7 +14,7 @@
 - [ ] tailscale guide {scheduled}
 - [x] how to use nodejs v22
 - [ ] how to use express {scheduled}
-- [ ] how hosting riceathon went {after the gallery is made}
+- [x] ~~how hosting riceathon went {after the gallery is made}~~ i just dont want to do this anymore
 - [ ] how to use tailwind {scheduled}
 - [ ] crc blog {scheduled}
 - [ ] how to use react {scheduled}
