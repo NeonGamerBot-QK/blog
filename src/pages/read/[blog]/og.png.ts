@@ -44,7 +44,7 @@ export async function GET({ params, request }) {
 
   // const element = OpenGraphImage(post);
   // const jsx = inlineTailwind(element);
-  const origin = (new URL(request.url).origin)
+  const origin = new URL(request.url).origin;
   //@ts-ignore
   const jsx = Og({ blogData: post, origin });
   const png = await PNG(jsx);
