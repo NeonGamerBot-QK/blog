@@ -64,7 +64,7 @@ I would also recommend looking at [this](https://community.torproject.org/relay/
 
 anyways to install tor on ubuntu at least its:
 
-```
+```bash
 apt install -y tor
 ```
 
@@ -72,7 +72,7 @@ you may find otherways to install tor for other distros [here](https://www.torpr
 and wow tor is installed! now time to configure tor to run an onion site.
 run `nano /etc/tor/torrc` and find the commented lines which have `HiddenServiceDir` and modify the content to:
 
-```
+```conf
 HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 127.0.0.1:80
 ```
@@ -94,7 +94,7 @@ nginx is a web server which can handle html and serve it to the internet.
 
 to install nginx on ubuntu run:
 
-```
+```sh
 sudo apt install nginx
 ```
 

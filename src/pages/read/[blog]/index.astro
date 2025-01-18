@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { estimateReadTime } from "../../../util/get-read-time";
+import { SEO } from "astro-seo";
 export async function getStaticPaths() {
   const files = await getCollection("blog");
   return files.filter((f) => f.data.date.getTime() < Date.now()).map((f) => {
@@ -35,6 +36,29 @@ const thepost = await blogInfo.render()
             document.documentElement.classList.add('dyslexic');
           }
          </script>
+             <SEO
+             title={blogInfo.data.title}
+             description={blogInfo.data.description}
+             openGraph={{
+               basic: {
+                 title: blogInfo.data.title,
+                 type: "blog",
+                 image: `./${blogInfo.slug}/og.png`,
+               },
+               optional: {
+                 locale: "en_US",
+                 description: "My Blogs",
+                 siteName: "Saahils Blog",
+               }
+             }}
+             charset="utf-8"
+             titleDefault="Saahils Blog"
+             extend={{
+               // extending the default link tags
+               link: [{ rel: "icon", href: "/favicon.ico" }],
+               meta: [{name: "theme-color", content: "#cba6f7"}, {name:"title", content: "Saahils Blog"}, { name: "msapplication-TileColor", content: "#cba6f7" }],
+             }}
+           />
 <!--
     <script
       src="https://giscus.app/client.js"
@@ -58,18 +82,23 @@ const thepost = await blogInfo.render()
     <main>
       <div class="hero w-full bg-base-200 min-h-screen">
         <div class="hero-content">
+          
           <div>
             <div class="text-center">
               <h1 class="text-5xl font-bold">{blogInfo.data.title}</h1>
               <p class="py-6 text-md">{blogInfo.data.description} - <span class="badge badge-outline">{estimateReadTime(blogInfo.body)}</span></p>
             </div>
             <div
-              class="p-5 rounded shadow-xl prose-invert prose prose-h1:font-bold prose-h2:text-xl
-  prose-a:text-blue-400 prose-p:text-justify prose-img:rounded-xl w-full max-w-screen-md "
+              class="prose-p:text-justify p-2 rounded shadow-xl prose-invert prose prose-h1:font-bold prose-h2:text-xl
+  prose-a:text-blue-400  prose-img:rounded-xl "
   style={{ 
     color: "#cdd6f4",
   }}
             >
+          <!--  dont ask why its here it just works -->
+            <figure>
+              <img src={blogInfo.data.cover} class="rounded w-full" alt="Cover image" />
+            </figure>
               <!-- <MarkdownPage markdown={blogInfo.body} /> -->
                {<thepost.Content />}
             </div>

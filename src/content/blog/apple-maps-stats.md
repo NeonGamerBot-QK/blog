@@ -25,7 +25,8 @@ MMS plays a key role in this code as i would have no other way to recive the mes
 ## How does the code actually work, stop giving bloat
 
 So this code watches the email and when it recives a text matching the janky way apple sends it.
-It compiles an epic json file with
+It compiles an epic json file with all the data sorted correctly. 
+This data can be used for an epik UI which could be added in the future, but its mainly just to track for now.
 
-[unfinished, draft]
-(please finish me)
+## Conclusion
+this was a pretty fun project!. i hope to improve it with a UI or smthing else in the future.
