@@ -38,15 +38,11 @@ export default function Og({
         flexDirection: "column",
       }}
     >
-      <h1 style={{}}>{blogData.data.title}</h1>
+      <h1>{blogData.data.title}</h1>
       <p>{blogData.data.description}</p>
       <span>Posted on {formattedDate(blogData.data.date)}</span>
       <img
         src={
-          //           (process.env.NODE_ENV == "development"
-          // ? "http://localhost:4321"
-          // : "https://blog.saahild.com")
-
           origin + blogData.data.cover
         }
         width={200}

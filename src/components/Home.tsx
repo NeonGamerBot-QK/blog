@@ -8,15 +8,15 @@ export default function HomePage({ files }) {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">
         <div className="lg:max-w-xl max-w-md">
-          <h1 className="text-5xl font-bold">Home Page</h1>
+          <h1 className="text-5xl font-bold">Blogs</h1>
           <div className="gap-6 pt-10 items-center">
             {files
               .filter((f) => f.data.date.getTime() < Date.now())
               .map((file, i) => (
                 <div
                   key={i}
-                  className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-5"
-                >
+                  className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-10 h-1/2"
+                >         
                   <figure>
                     <img
                       src={file.data.cover}
