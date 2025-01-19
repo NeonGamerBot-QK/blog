@@ -16,7 +16,7 @@ export default function HomePage({ files }) {
                 <div
                   key={i}
                   className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-10 h-1/2"
-                >         
+                >
                   <figure>
                     <img
                       src={file.data.cover}
