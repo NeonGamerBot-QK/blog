@@ -42,9 +42,7 @@ export default function Og({
       <p>{blogData.data.description}</p>
       <span>Posted on {formattedDate(blogData.data.date)}</span>
       <img
-        src={
-          origin + blogData.data.cover
-        }
+        src={origin + blogData.data.cover}
         width={200}
         height={200}
         style={{
