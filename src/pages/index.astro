@@ -23,11 +23,33 @@ const files = await getCollection("blog");
         document.documentElement.classList.add("dyslexic");
       }
     </script>
-    <script is:raw is:inline async src="https://ackee.saahild.com/tracker.js" data-ackee-server="https://ackee.saahild.com" data-ackee-domain-id="ee0b7b5c-cd10-4e1f-a6b2-5c40c8f5473b" data-ackee-detailed="true"  data-ackee-opts='{
+    <script is:raw is:inline async src="https://ackee.saahild.com/tracker.js" data-ackee-server="https://ackee.saahild.com" data-ackee-domain-id="ee0b7b5c-cd10-4e1f-a6b2-5c40c8f5473b" data-ackee-detailed="true"  data-ackee-ignore-own-visits="false" data-ackee-opts='{
       "localhostIgnore": false,
       "ignoreOwnVisits": false,
       "detailed": true
    }'></script>
+   <script is:inline>
+window.onload = function() {
+ const a =  ackeeTracker.create(`https://ackee.saahild.com`, {
+  detailed: true,
+  ignoreOwnVisits: false,
+ })
+// setInterval(() => {
+//   a
+//  .action('e49da181-1b12-4db4-8296-35ec26a8f1a9', { key: 'Click', value: 1 })
+
+// }, 1000) 
+const els = document.querySelectorAll("[data-ackee-action]")
+console.log(els)
+for(const el of els) {
+  el.addEventListener("click", (e) => {
+    a.action(`02edb20f-d68d-498f-a124-4c13cf8395a4`, { key: e.target.dataset.ackeeAction, value: 1 })
+    e.preventDefault()
+    window.location.pathname = e.target.dataset.to
+  })
+}
+}
+</script>
     <SEO
       title="Saahils blog"
       description="My Blogs"
