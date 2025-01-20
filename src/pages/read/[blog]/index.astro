@@ -7,15 +7,20 @@ export async function getStaticPaths() {
   return files
     .filter((f) => f.data.date.getTime() < Date.now())
     .map((f) => {
-      return { params: { blog: f.slug } };
+      return { params: { blog: f.id.replace('src/content/blog/', '') } };
     });
 }
 
 const { blog } = Astro.params;
 console.log(blog);
-const blogInfo = (await getCollection("blog")).find((bl) => blog === bl.slug);
+const blogInfo = (await getCollection("blog")).filter((f) => f.data.date.getTime() < Date.now()).find((bl) => blog === bl.id.replace('src/content/blog/', ''));
+if(!blogInfo) return new Response("Redirecting to 404", { status: 302,
+  headers: {
+    location: "/404"
+  }
+ });
 console.debug(blogInfo);
-const thepost = await blogInfo.render();
+const thepost = blogInfo.rendered.html
 ---
 
 <html lang="en">
@@ -45,7 +50,7 @@ const thepost = await blogInfo.render();
         basic: {
           title: blogInfo.data.title,
           type: "blog",
-          image: `./${blogInfo.slug}/og.png`,
+          image: `./${blogInfo.id.replace('src/content/blog/', '')}/og.png`,
         },
         optional: {
           locale: "en_US",
@@ -113,7 +118,7 @@ const thepost = await blogInfo.render();
                 />
               </figure>
               <!-- <MarkdownPage markdown={blogInfo.body} /> -->
-              {(<thepost.Content />)}
+              {(<div set:html={thepost}></div>)}
             </div>
             <br />
 

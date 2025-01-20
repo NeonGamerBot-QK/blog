@@ -22,7 +22,7 @@ export async function GET(context) {
           title: e.data.title,
           description: e.data.description,
           pubDate: e.data.date,
-          link: `/read/${e.slug}`,
+          link: `/read/${e.id.replace('src/content/blog/', '')}`,
           content: e.body,
         };
       }),

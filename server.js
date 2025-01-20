@@ -15,7 +15,9 @@ app.use(morgan('combined'))
 app.use(statusMonitor0.default());
 app.use(base, express.static('build/client/'));
 app.use(ssrHandler);
-
+app.use((req,res,next) => {
+    res.redirect(302, `/404`)
+})
 app.listen(process.env.PORT || process.env.SERVER_PORT || 3000, () => {
     console.log(`Running on port ::${process.env.PORT || process.env.SERVER_PORT || 3000}`);
 });

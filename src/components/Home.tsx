@@ -3,7 +3,7 @@ import React from "react";
 export default function HomePage({ files }) {
   // const files = getCollection;
   //TODO: Add your code here
-  // console.debug(files[0]);
+  console.debug(files[0]);
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">
@@ -31,7 +31,7 @@ export default function HomePage({ files }) {
                       <a
                         className="text-base btn btn-primary"
                         style={{}}
-                        href={`/read/${file.slug}`}
+                        href={`/read/${file.id.replace('src/content/blog/', '')}`}
                       >
                         Read
                       </a>
