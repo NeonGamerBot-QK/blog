@@ -32,10 +32,14 @@ export default function HomePage({ files }) {
                         className="text-base btn btn-primary"
                         style={{}}
                         //@ts-ignore
-                        onClick={() => {window.ackeeTracker.create(`ee0b7b5c-cd10-4e1f-a6b2-5c40c8f5473b`).action(`02edb20f-d68d-498f-a124-4c13cf8395a4`, {
-                          key: file.data.title,
-                          value: 1
-                        })
+
+                        onClick={() => {
+   //                       window.ackeeTracker.create(`ee0b7b5c-cd10-4e1f-a6b2-5c40c8f5473b`).action(`02edb20f-d68d-498f-a124-4c13cf8395a4`, {
+     //                     key: file.data.title,
+       //                   value: 1
+         //               })
+                          //
+                        location.pathname = '/read/'+file.id.replace('src/content/blog/', '')
                       console.log(`$click`)
                       }}
                         // href={`/read/${file.id.replace("src/content/blog/", "")}`}
