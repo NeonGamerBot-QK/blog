@@ -3,7 +3,7 @@ export default function HomePage({ files }) {
   // const ackee = getClient()
   // const files = getCollection;
   //TODO: Add your code here
-  window.console.log(files[0]);
+//  window.console.log(files[0]);
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">
