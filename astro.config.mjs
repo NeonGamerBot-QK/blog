@@ -6,6 +6,7 @@ import robotsTxt from "astro-robots-txt";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
+import node from '@astrojs/node';
 import astroMetaTags from "astro-meta-tags";
 // import tunnel from "astro-tunnel";
 const SITE_TITLE = "Saahils Blog";
@@ -16,8 +17,10 @@ export default defineConfig({
     process.env.NODE_ENV == "production"
       ? "https://blog.saahild.com"
       : "http://localhost:4321",
-  output: "static",
+
+  output: "server",
   outDir: "./build",
+
   // Enable React to support React JSX components.
   integrations: [
     react(),
@@ -40,6 +43,7 @@ export default defineConfig({
     astroMetaTags(),
     // tunnel(),
   ],
+
   markdown: {
     shikiConfig: {
       themes: {
@@ -48,4 +52,8 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: node({
+    mode: "middleware",
+  }),
 });
