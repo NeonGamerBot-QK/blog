@@ -17,6 +17,7 @@ export default defineConfig({
       ? "https://blog.saahild.com"
       : "http://localhost:4321",
   output: "static",
+  outDir: "./build",
   // Enable React to support React JSX components.
   integrations: [
     react(),

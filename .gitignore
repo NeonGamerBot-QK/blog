@@ -3,3 +3,4 @@ dist
 .astro
 .direnv
 .venv
+build
