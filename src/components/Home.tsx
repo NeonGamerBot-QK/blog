@@ -31,7 +31,7 @@ export default function HomePage({ files }) {
                       <a
                         className="text-base btn btn-primary"
                         style={{}}
-                        href={`/read/${file.id.replace('src/content/blog/', '')}`}
+                        href={`/read/${file.id.replace("src/content/blog/", "")}`}
                       >
                         Read
                       </a>
