@@ -37,10 +37,10 @@ app.listen(process.env.PORT || process.env.SERVER_PORT || 3000, () => {
           console.log(`New git stuff wowie`);
           console.log(response);
           console.debug(commitMessage);
-          
-            setTimeout(() => {
-              process.exit();
-            }, 1000);
+
+          setTimeout(() => {
+            process.exit();
+          }, 1000);
         }
       }
     });
