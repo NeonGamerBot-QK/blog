@@ -32,8 +32,10 @@ export default function HomePage({ files }) {
                         className="text-base btn btn-primary"
                         style={{}}
                         //@ts-ignore
-data-to={"/read/" + file.id.replace("src/content/blog/", "")}
-data-ackee-action={file.data.title}
+                        data-to={
+                          "/read/" + file.id.replace("src/content/blog/", "")
+                        }
+                        data-ackee-action={file.data.title}
                         // href={`/read/${file.id.replace("src/content/blog/", "")}`}
                       >
                         Read
