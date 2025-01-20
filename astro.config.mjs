@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import astroMetaTags from "astro-meta-tags";
-import tunnel from "astro-tunnel";
+// import tunnel from "astro-tunnel";
 const SITE_TITLE = "Saahils Blog";
 // https://astro.build/config
 console.log(process.env.NODE_ENV);
@@ -38,7 +38,7 @@ export default defineConfig({
     sitemap(),
     compressor(),
     astroMetaTags(),
-    tunnel(),
+    // tunnel(),
   ],
   markdown: {
     shikiConfig: {
