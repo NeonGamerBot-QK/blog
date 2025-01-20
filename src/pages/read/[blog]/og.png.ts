@@ -9,7 +9,7 @@ export async function getStaticPaths() {
   return files
     .filter((f) => f.data.date.getTime() < Date.now())
     .map((f) => {
-      return { params: { blog: f.id.replace('src/content/blog/', '') } };
+      return { params: { blog: f.id.replace("src/content/blog/", "") } };
     });
 }
 export async function PNG(component: any) {
@@ -37,7 +37,9 @@ export async function SVG(component: any) {
 }
 
 export async function GET({ params, request }) {
-  const post = posts.find((post) => post.id.replace('src/content/blog/', '') === params.blog); // Find the specific post by slug
+  const post = posts.find(
+    (post) => post.id.replace("src/content/blog/", "") === params.blog,
+  ); // Find the specific post by slug
   if (!post) {
     return new Response("Post not found", { status: 404 });
   }
