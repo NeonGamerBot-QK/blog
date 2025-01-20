@@ -1,11 +1,13 @@
-# Astro + React Example
+[![wakatime](https://wakatime.com/badge/user/018eed1d-6093-4f51-9fca-7863b7a1ac97/project/3d28a60d-1430-4e17-878b-8b9d8083216c.svg)](https://wakatime.com/badge/user/018eed1d-6093-4f51-9fca-7863b7a1ac97/project/3d28a60d-1430-4e17-878b-8b9d8083216c)
+# Blog site
+![screenshot](https://cloud-cj5ji8s1f-hack-club-bot.vercel.app/0blog.saahild.com_.png)
 
-```
-npm init astro -- --template framework-react
-```
+This is my blog site made in astro.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/framework-react)
+Most of the blog posts are scheduled but a couple are out rn.
 
-This example showcases Astro working with [React](https://reactjs.org/).
+> [!NOTE]
+> this is a WIP 
 
-Write your React components as `.jsx` or `.tsx` files in your project.
+## Blogs?? Ideas??
+Check out my [todo](./TODO.md)
