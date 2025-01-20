@@ -1,9 +1,9 @@
 import React from "react";
-
 export default function HomePage({ files }) {
+  // const ackee = getClient()
   // const files = getCollection;
   //TODO: Add your code here
-  console.debug(files[0]);
+  window.console.log(files[0]);
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">
@@ -28,13 +28,20 @@ export default function HomePage({ files }) {
                     <h2 className="card-title">{file.data.title}</h2>
                     <p>{file.data.description}</p>
                     <div className="card-actions justify-end">
-                      <a
+                      <button
                         className="text-base btn btn-primary"
                         style={{}}
-                        href={`/read/${file.id.replace("src/content/blog/", "")}`}
+                        //@ts-ignore
+                        onClick={() => {window.ackeeTracker.create(`ee0b7b5c-cd10-4e1f-a6b2-5c40c8f5473b`).action(`02edb20f-d68d-498f-a124-4c13cf8395a4`, {
+                          key: file.data.title,
+                          value: 1
+                        })
+                      console.log(`$click`)
+                      }}
+                        // href={`/read/${file.id.replace("src/content/blog/", "")}`}
                       >
                         Read
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
