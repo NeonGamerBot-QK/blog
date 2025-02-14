@@ -20,5 +20,7 @@
 - [ ] crc blog {scheduled}
 - [ ] how to use react {scheduled}
 - [ ] setup jellyfin tut {scheduled}
+- [ ] how to use ssh keys {scheduled}
+- [ ] how to use a gpg key {scheduled}
 - [x] on how i automated imessage {scheduled}
       _monthly blog_

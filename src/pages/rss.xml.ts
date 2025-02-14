@@ -24,6 +24,11 @@ export async function GET(context) {
           pubDate: e.data.date,
           link: `/read/${e.id.replace("src/content/blog/", "")}`,
           content: e.body,
+          enclosure: {
+            url: `/read/${e.id.replace("src/content/blog/", "")}/og.png`,
+            length: e.body.length,
+            type: "image/png"
+          }
         };
       }),
     // (optional) inject custom xml
