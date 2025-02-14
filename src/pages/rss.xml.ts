@@ -27,8 +27,8 @@ export async function GET(context) {
           enclosure: {
             url: `/read/${e.id.replace("src/content/blog/", "")}/og.png`,
             length: e.body.length,
-            type: "image/png"
-          }
+            type: "image/png",
+          },
         };
       }),
     // (optional) inject custom xml
