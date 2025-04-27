@@ -15,7 +15,7 @@
 - [x] how to use nodejs v22
 - [ ] how to use express {scheduled}
 - [x] ~~how hosting riceathon went {after the gallery is made}~~ i just dont want to do this anymore
-- [ ] how my minus12 submission went
+- [x] how my minus12 submission went
 - [ ] how to use tailwind {scheduled}
 - [ ] crc blog {scheduled}
 - [ ] how to use react {scheduled}
@@ -23,4 +23,4 @@
 - [ ] how to use ssh keys {scheduled}
 - [ ] how to use a gpg key {scheduled}
 - [x] on how i automated imessage {scheduled}
-      _monthly blog_
+      _monthly blog\*_
