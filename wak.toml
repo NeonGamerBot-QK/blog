@@ -14,4 +14,4 @@ exclude_binary_files = true # whether to ignore binary files
 # language_mapping = {".kicad_sch" = "Kicad Schematic"} # custom language mapping
 
 [project]
-name = "Blog" # your project name
+name = "blog" # your project name
