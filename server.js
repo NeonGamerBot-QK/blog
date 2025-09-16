@@ -1,4 +1,4 @@
-import "dotenv/config"
+import "dotenv/config";
 import express from "express";
 import { handler as ssrHandler } from "./build/server/entry.mjs";
 import * as statusMonitor0 from "express-status-monitor";
