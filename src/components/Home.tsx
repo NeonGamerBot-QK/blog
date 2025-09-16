@@ -3,13 +3,17 @@ export default function HomePage({ files }) {
   // const ackee = getClient()
   // const files = getCollection;
   //TODO: Add your code here
+  // future neon here: vrovrovrooro
   //  window.console.log(files[0]);
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content text-center">
-        <div className="lg:max-w-xl max-w-md">
-          <h1 className="text-5xl font-bold">Blogs</h1>
-          <div className="gap-6 pt-10 items-center">
+    <div className="hero-content text-center flex-col">
+      <div className="lg:max-w-xl max-w-md">
+        <h1 className="text-5xl font-bold">Blogs</h1>
+      </div>
+  
+      {/* Grid container */}
+      <div className="grid gap-4 pt-10 sm:grid-cols-2 lg:grid-cols-3">
             {files
               .filter((f) => f.data.date.getTime() < Date.now())
               .map((file, i) => (
@@ -47,6 +51,5 @@ export default function HomePage({ files }) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
