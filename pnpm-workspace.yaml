@@ -1,5 +1,5 @@
 onlyBuiltDependencies:
-  - '@sentry/cli'
+  - "@sentry/cli"
   - esbuild
   - event-loop-stats
   - sharp
