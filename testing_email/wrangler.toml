@@ -1,0 +1,7 @@
+main = "w.js"
+compatibility_date = "2025-09-17"
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
+[vars]
+WEBHOOK_URL = "https://webhook.site/1ea59433-5b73-4ac4-b2ad-ea8e230c85f9"

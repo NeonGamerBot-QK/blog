@@ -13,13 +13,13 @@ export default function HomePage({ files }) {
         </div>
 
         {/* Grid container */}
-        <div className="grid gap-4 pt-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-2 pt-10 sm:grid-cols-2 lg:grid-cols-3">
           {files
             .filter((f) => f.data.date.getTime() < Date.now())
             .map((file, i) => (
               <div
                 key={i}
-                className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-10 h-1/2"
+                className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-10"
               >
                 <figure>
                   <img
@@ -40,7 +40,7 @@ export default function HomePage({ files }) {
                         "/read/" + file.id.replace("src/content/blog/", "")
                       }
                       data-ackee-action={file.data.title}
-                      // href={`/read/${file.id.replace("src/content/blog/", "")}`}
+                    // href={`/read/${file.id.replace("src/content/blog/", "")}`}
                     >
                       Read
                     </button>
