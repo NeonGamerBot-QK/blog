@@ -40,7 +40,7 @@ export default function HomePage({ files }) {
                         "/read/" + file.id.replace("src/content/blog/", "")
                       }
                       data-ackee-action={file.data.title}
-                    // href={`/read/${file.id.replace("src/content/blog/", "")}`}
+                      // href={`/read/${file.id.replace("src/content/blog/", "")}`}
                     >
                       Read
                     </button>
