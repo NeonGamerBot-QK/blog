@@ -27,6 +27,7 @@
     "@astrojs/tailwind": "5.1.4",
     "@catppuccin/daisyui": "^1.2.1",
     "@catppuccin/vscode": "^3.18.0",
+    "@octokit/rest": "^22.0.0",
     "@sentry/astro": "^8.55.0",
     "@tailwindcss/typography": "^0.5.16",
     "ackee-tracker": "^5.1.0",
