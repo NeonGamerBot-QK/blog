@@ -13,6 +13,11 @@ export default function POST(req: Request) {
   });
 }
 
-function createPR(title, description, is_draft, auto_merge_pr, blog_content, cover) {
-
-}
+function createPR(
+  title,
+  description,
+  is_draft,
+  auto_merge_pr,
+  blog_content,
+  cover,
+) {}
