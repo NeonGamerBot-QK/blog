@@ -15,11 +15,15 @@ export default function HomePage({ files }) {
         {/* Grid container */}
         <div className="grid gap-2 pt-10 sm:grid-cols-2 lg:grid-cols-3">
           {files
-            .filter((f) => f.data.date.getTime() < Date.now())
+            // .filter((f) => f.data.date.getTime() < Date.now())
+            .map(f => {
+              f.data.is_not_out = f.data.date.getTime() < Date.now()
+              return f
+            })
             .map((file, i) => (
               <div
                 key={i}
-                className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-10"
+                className={`card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl m-10 ${file.data.is_not_out ? "" : "border-8 border-dashed border-warning"}`}
               >
                 <figure>
                   <img
@@ -40,7 +44,7 @@ export default function HomePage({ files }) {
                         "/read/" + file.id.replace("src/content/blog/", "")
                       }
                       data-ackee-action={file.data.title}
-                      // href={`/read/${file.id.replace("src/content/blog/", "")}`}
+                    // href={`/read/${file.id.replace("src/content/blog/", "")}`}
                     >
                       Read
                     </button>

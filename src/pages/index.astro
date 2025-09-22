@@ -3,8 +3,18 @@
 // import "../assets/dyslexic.css";
 import { getCollection } from "astro:content";
 import { SEO } from "astro-seo";
+import { Astro} from "astro"
 import Home from "../components/Home.tsx";
 const files = await getCollection("blog");
+let showingUnreleased = false;
+console.log(import.meta.env.DEV, import.meta.env.PUBLIC_SHOW_UNPUBLISHED)
+  if(import.meta.env.DEV) {
+    console.log(0)
+    if(import.meta.env.PUBLIC_SHOW_UNPUBLISHED) {
+      console.log(1)
+      showingUnreleased=true
+    }
+  }
 // console.log(files, 'f');
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -80,7 +90,10 @@ for(const el of els) {
   </head>
   <body>
     <main>
-      <Home files={files} />
+      <Home files={files.filter((f) => {
+ if(showingUnreleased) return true; 
+return f.data.date.getTime() < Date.now()
+    })} showingUnreleased={showingUnreleased} />
     </main>
   </body>
 </html>

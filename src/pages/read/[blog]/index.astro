@@ -1,24 +1,49 @@
 ---
 import { getCollection } from "astro:content";
+import { Astro } from 'astro';
 import { estimateReadTime } from "../../../util/get-read-time";
 import { SEO } from "astro-seo";
 export async function getStaticPaths() {
   const files = await getCollection("blog");
+  let showingUnreleased = false;
+  console.log(import.meta.env, 'read')
+  if(import.meta.env.DEV) {
+    if(import.meta.env.PUBLIC_SHOW_UNPUBLISHED) {
+      showingUnreleased=true
+    }
+  }
   return files
-    .filter((f) => f.data.date.getTime() < Date.now())
+    .filter((f) => {
+ if(showingUnreleased) return true; 
+return f.data.date.getTime() < Date.now()
+    })
     .map((f) => {
       return { params: { blog: f.id.replace('src/content/blog/', '') } };
     });
 }
 
+  let showingUnreleased = false;
+  console.log(import.meta.env, 'read')
+  if(import.meta.env.DEV) {
+    if(import.meta.env.PUBLIC_SHOW_UNPUBLISHED) {
+      showingUnreleased=true
+    }
+  }
 const { blog } = Astro.params;
 console.log(blog);
-const blogInfo = (await getCollection("blog")).filter((f) => f.data.date.getTime() < Date.now()).find((bl) => blog === bl.id.replace('src/content/blog/', ''));
-if(!blogInfo) return new Response("Redirecting to 404", { status: 302,
+const blogInfo = (await getCollection("blog")).filter((f) =>showingUnreleased? true :  f.data.date.getTime() < Date.now()).map(f=>{
+  f.data.is_published =  f.data.date.getTime() < Date.now()
+   return f;
+   }).find((bl) => blog === bl.id.replace('src/content/blog/', ''));
+if(!blogInfo) {
+console.log(`redirecting`)
+  return new Response("Redirecting to 404", { status: 302,
   headers: {
     location: "/404"
   }
  });
+
+}
 console.debug(blogInfo);
 const thepost = blogInfo.rendered.html
 ---
@@ -96,7 +121,8 @@ const thepost = blogInfo.rendered.html
   </head>
   <body>
     <main>
-      <div class="hero w-full bg-base-200 min-h-screen">
+
+      <div class={`hero w-full bg-base-200 min-h-screen ${!blogInfo.data.is_published ? "border-8 border-dashed border-warning" : "" }`}>
         <div class="hero-content">
           <div>
             <div class="text-center">
