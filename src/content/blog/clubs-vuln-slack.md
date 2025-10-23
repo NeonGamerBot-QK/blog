@@ -1,12 +1,10 @@
 ---
-
 title: "Hey where did all the Slack channels go?"
 description: "My experience and thoughts on a recent security vuln I found which allowed you to gain Slack workspace admin (bypasses 2FA)"
 date: 2025-10-22 # YYYY-MM-DD
 tags: ["markdown", "hackclub", "security", "slack", "clubs"]
 cover: "/images/club-vuln/banner.png"
 ---
-
 
 Before we jump into my story, i would like to say this is not about the whole club team, mostly just the lead club eng and also let's add some context:
 
@@ -45,7 +43,7 @@ I’m going to start recording when I find a vulnerability. I’m also fixing up
 
 Here are some links to what I’m working on right now:
 
-* [Link to PR which fixes it on club-dashboard](https://github.com/hackclub/club-dashboard/pull/100)
-* soon: link to commit/repo of where the vuln was (I’ll add this once the code is force-pushed)
-* soon: a second PR implementing authentication
-* soon: link to ACH wire
+- [Link to PR which fixes it on club-dashboard](https://github.com/hackclub/club-dashboard/pull/100)
+- soon: link to commit/repo of where the vuln was (I’ll add this once the code is force-pushed)
+- soon: a second PR implementing authentication
+- soon: link to ACH wire
