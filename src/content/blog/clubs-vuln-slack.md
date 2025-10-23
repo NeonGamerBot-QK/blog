@@ -7,7 +7,8 @@ tags: ["markdown", "hackclub", "security", "slack", "clubs"]
 cover: "/images/club-vuln/banner.png"
 ---
 
-Before we jump into my story, let's add some context:
+
+Before we jump into my story, i would like to say this is not about the whole club team, mostly just the lead club eng and also let's add some context:
 
 ## Hack Club Security program
 
@@ -15,7 +16,7 @@ The Hack Club security program was created by [3kh0](https://3kh0.net) so teens 
 
 ## What actually happened? What do you mean by "Hey, where did all the Slack channels go?"
 
-Well… I was looking through the [Hack Club club dashboard source code](https://github.com/hackclub/club-dashboard), and in the very long AI-generated `main.py` (authored by the lead club engineering lead) I was Ctrl+F’ing through the API endpoints. I found a URL that’s used to invite members to Slack as multi-channel guests. At first it looked normal, but then I noticed there were absolutely no authentication headers in that code — which is extremely concerning, because it provides a way into the Hack Club Slack with no logging whatsoever, making it easy for the Slack to be raided.
+Well… I was looking through the [Hack Club club dashboard source code](https://github.com/hackclub/club-dashboard), and in the very long AI-generated `main.py` (made by the lead club engineering lead) I was Ctrl+F’ing through the API endpoints. I found a URL that’s used to invite members to Slack as multi-channel guests. At first it looked normal, but then I noticed there were absolutely no authentication headers in that code — which is extremely concerning, because it provides a way into the Hack Club Slack with no logging whatsoever, making it easy for the Slack to be raided.
 
 I then found the code on the lead club engineer’s GitHub (for some reason not on the Hack Club org). In the screenshot below you can see the code contains a clone of my own code for [explorpheus](https://github.com/hackclub/explorpheus), but this version appears to be a Python server that invites people to Slack with no auth. While browsing another folder (`attached_assets`) I found something even more concerning: **log files**.
 ![ss of code structure](/images/club-vuln/ss_of_stuff.png)
