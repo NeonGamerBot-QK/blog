@@ -13,7 +13,7 @@ app.use(
   helmet({
     // no csp please
     contentSecurityPolicy: false,
-  })
+  }),
 );
 app.use(morgan("combined"));
 app.use(statusMonitor0.default());
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 app.listen(process.env.PORT || process.env.SERVER_PORT || 3000, () => {
   console.log(
-    `Running on port ::${process.env.PORT || process.env.SERVER_PORT || 3000}`
+    `Running on port ::${process.env.PORT || process.env.SERVER_PORT || 3000}`,
   );
   // watcher
   const timer = setInterval(() => {
